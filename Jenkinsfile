@@ -7,9 +7,9 @@ pipeline {
     stage('Build') {
       steps {
         echo "Installing package requirements:"
-        sh '(cd $WORKSPACE/theserverproject && npm install)'
-        sh '(cd $WORKSPACE/theserverproject && npm run build)'
-        sh 'mv $WORKSPACE/theserverproject/build $WORKSPACE/theserverproject/html'
+        sh '(cd $WORKSPACE/projects && npm install)'
+        sh '(cd $WORKSPACE/projects && npm run build)'
+        sh 'mv $WORKSPACE/projects/build $WORKSPACE/projects/html'
       }
     }
     stage('Test') {
@@ -22,7 +22,7 @@ pipeline {
         expression { env.BRANCH_NAME == 'master' }
       }
       steps {
-        sh 'sshpass -p $PROJECTSPASSWORD scp -r -oStrictHostKeyChecking=no $WORKSPACE/theserverproject/html/ projects@$SERVER:$PROJECTSLOCATION'
+        sh 'sshpass -p $PROJECTSPASSWORD scp -r -oStrictHostKeyChecking=no $WORKSPACE/projects/html/ projects@$SERVER:$PROJECTSLOCATION'
       }
     }
     stage('Staging-Deploy') {
@@ -30,7 +30,7 @@ pipeline {
         expression { env.BRANCH_NAME == 'staging'  }
       }
       steps {
-        sh 'sshpass -p $PROJECTSPASSWORD scp -r -oStrictHostKeyChecking=no $WORKSPACE/theserverproject/html/ basesite@$SERVER:$PROJECTSLOCATION'
+        sh 'sshpass -p $PROJECTSPASSWORD scp -r -oStrictHostKeyChecking=no $WORKSPACE/projects/html/ projects@$SERVER:$PROJECTSLOCATION'
       }
     }
   }
