@@ -30,7 +30,7 @@ pipeline {
         expression { env.BRANCH_NAME == 'staging'  }
       }
       steps {
-        sh 'sshpass -p $PROJECTSPASSWORD scp -r -oStrictHostKeyChecking=no $WORKSPACE/projects/html/ projects@$SERVER:$PROJECTSLOCATION'
+        sh 'sshpass -p $PROJECTSPASSWORD scp -r -oStrictHostKeyChecking=no $WORKSPACE/projects/html/ projects@$SERVER:$BETAPROJECTSLOCATION'
       }
     }
   }
