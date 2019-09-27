@@ -11,8 +11,10 @@ function App() {
           Welcome to the projects page!
         </p>
         <p>
-          Please check back regularly to see if this is setup
+          Want to see a preview of what's to come? Go to the staging deploy and check out
+          the beta version of this site! 
         </p>
+        <a href="http://beta.projects.theserverproject.com">Staging Site</a>
       </header>
     </div>
   );
