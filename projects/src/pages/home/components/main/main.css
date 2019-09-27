@@ -1,0 +1,7 @@
+/* Main Landing class div  */
+#main {
+    width: 100%;
+    height: var(--landing-height);
+    background-color: var(--empty-pane-color);
+}
+
