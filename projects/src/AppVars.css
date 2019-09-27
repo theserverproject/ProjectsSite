@@ -1,0 +1,15 @@
+:root {
+    
+    /* Colors */
+    --text-bg-color: #353535;
+    --text-fg-color: #e0e0e0;
+    --empty-pane-color: #2a2a2a;
+
+    /* Sizes */
+    --navbar-height: 50px;
+    --navbar-actual-height: 53px; /* Height + 3px bottom border */
+    --footer-height: 30px;
+    --landing-height: calc(100vh - var(--navbar-actual-height) - var(--footer-height));
+
+}
+
