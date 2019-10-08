@@ -15,6 +15,7 @@ function App() {
             'longName': 'The Server Project',
             'description': "TBD",
             'github': 'https://github.com/theserverproject/BaseSite',
+            'serverLink': 'http://www.theserverproject.com',
         },
     ];
 
