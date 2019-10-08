@@ -7,3 +7,56 @@
     border-bottom: 3px solid;
     border-color: var(--text-fg-color);
 }
+
+.logo-box {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.logo {
+
+}
+
+.title-box {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.title-text {
+    text-align: center;
+    margin: 0 0;
+    color: var(--text-fg-color);
+}
+
+.dropdown-box {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown {
+
+}
+
+.dropdown-text {
+    text-align: center;
+    color: var(--text-fg-color);
+    font-size: 30px;
+}
+
+.dropdown-item {
+    color: var(--text-fg-color);
+    text-decoration: none;
+}
+
+.content-seperator {
+    flex-grow: 1;
+}
+
+
+
