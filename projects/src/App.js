@@ -11,7 +11,7 @@ function App() {
 
     let projects = [
         {
-            'shortName': 'The Server Project',
+            'shortName': 'TheServerProject',
             'longName': 'The Server Project',
             'description': "TBD",
             'github': 'https://github.com/theserverproject/BaseSite',
