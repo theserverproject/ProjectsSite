@@ -15,10 +15,6 @@
     display: flex;
 }
 
-.logo {
-
-}
-
 .title-box {
     flex: 1 1 0px;
     justify-content: center;
