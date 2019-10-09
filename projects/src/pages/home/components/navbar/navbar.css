@@ -9,8 +9,8 @@
 }
 
 .logo-box {
-    flex-grow: 1;
-    justify-content: center;
+    flex: 1 1 0px;
+    justify-content: left;
     align-items: center;
     display: flex;
 }
@@ -20,7 +20,7 @@
 }
 
 .title-box {
-    flex-grow: 1;
+    flex: 1 1 0px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -33,20 +33,28 @@
 }
 
 .dropdown-box {
-    flex-grow: 1;
+    flex: 1 1 0px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .dropdown {
-
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    margin: 0px 20%;
+    height: 100%; /* Fill the height of its container. */
 }
 
 .dropdown-text {
     text-align: center;
     color: var(--text-fg-color);
     font-size: 30px;
+    width: 100%; /* Fill the width so that the dropdown a proper width */
 }
 
 .dropdown-item {
