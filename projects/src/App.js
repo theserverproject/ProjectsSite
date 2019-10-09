@@ -8,13 +8,24 @@ import './App.css';
 import './AppVars.css';
 
 function App() {
-  return (
-    <div className="page-content">
-        <Navbar/>
-        <Main/>
-        <Footer/>
-    </div>
-  );
+
+    let projects = [
+        {
+            'shortName': 'TheServerProject',
+            'longName': 'The Server Project',
+            'description': "TBD",
+            'github': 'https://github.com/theserverproject/BaseSite',
+            'serverLink': 'http://www.theserverproject.com',
+        },
+    ];
+
+    return (
+        <div className="page-content">
+            <Navbar projects={ projects }/>
+            <Main projects={ projects }/>
+            <Footer/>
+        </div>
+    );
 }
 
 export default App;
