@@ -3,14 +3,15 @@
     width: 100%;
     height: var(--landing-height);
     background-color: var(--empty-pane-color);
+    overflow-y: auto;
 }
 
 /* Landing class CSS  */
 .project-panel {
-    /* 15*2 for padding. 90% because 2 content seperators.  */
-    height: 20%;
+
     width: 50%;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     vertical-align: top;
     margin-left: 25%;
     margin-right: 25%;
@@ -23,3 +24,31 @@
     height: 5%;
 }
 
+
+/* Panel Ids */
+#description-panel {
+    display: flex;
+    flex-direction: column;
+    
+    height: 170px;
+}
+
+/* Panel Classes */
+.description-header {
+    text-align: center;
+    margin: 2px 0px;
+    text-decoration: underline;
+}
+
+.description {
+    margin: 5px 0px;
+    text-align: left;
+}
+
+.demo-link {
+
+}
+
+.demo-button {
+    width: 100%;
+}

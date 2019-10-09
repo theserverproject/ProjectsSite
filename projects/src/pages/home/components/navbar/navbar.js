@@ -1,5 +1,6 @@
 import React from 'react';
 import './navbar.css';
+import { Link } from 'react-router-dom';
 
 import Image from '../../../../basicComponents/image/Image';
 import Dropdown from '../../../../basicComponents/dropdown/Dropdown';
@@ -9,7 +10,14 @@ const Navbar = (props) => {
     let dropdownItems = [];
 
     props.projects.forEach((project) => {
-        dropdownItems.push(<a key={ project.shortName } href={ project.serverLink } className="dropdown-item">{ project.shortName }</a>);
+        let link = (
+            project.projectsUrl ?
+                <Link key={ project.shortName } to={ project.projectsUrl } className="dropdown-item">{ project.shortName }</Link>
+            :
+                <a key={ project.shortName } href={ project.Url } className="dropdown-item">{ project.shortName }</a>
+            );
+
+        dropdownItems.push(link);
     });
 
     return (
