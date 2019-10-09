@@ -1,0 +1,4 @@
+[submodule "projects/src/basicComponents"]
+	path = projects/src/basicComponents
+	url = https://github.com/theserverproject/basicComponents.git
+	branch = master
