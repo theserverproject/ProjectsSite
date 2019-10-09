@@ -1,30 +1,48 @@
 import React from 'react';
-import Navbar from './pages/home/components/navbar/navbar';
-import Main from './pages/home/components/main/main';
-import Footer from './pages/home/components/footer/footer';
+import { Switch, Route } from 'react-router-dom';
+import Home from './pages/home/home';
 
 // Import css classes
 import './App.css';
 import './AppVars.css';
 
-function App() {
+const App = () => {
 
     let projects = [
         {
             'shortName': 'TheServerProject',
             'longName': 'The Server Project',
-            'description': "TBD",
+            'description': (
+                            <React.Fragment>
+                                The server project is as simple as it sounds.
+                                It is a home-owned server being used for what
+                                servers are used best for: serving stuff. The
+                                website you're looking at right now is served
+                                off of it.
+                                <br/><br/>
+                                Want to learn more about the server project?
+                                Click the button below to see its homepage!
+                            </React.Fragment>
+                           ),
             'github': 'https://github.com/theserverproject/BaseSite',
-            'serverLink': 'http://www.theserverproject.com',
+            'Url': 'http://www.theserverproject.com',
+            'projectsUrl': '',
+            'buttonText': 'Take me to the home page!',
         },
     ];
 
     return (
-        <div className="page-content">
-            <Navbar projects={ projects }/>
-            <Main projects={ projects }/>
-            <Footer/>
-        </div>
+        <Switch>
+            <Route path="/test">
+                <p>
+                    hello. Wecome to the secret testing path. Nothing fun lives
+                    here, you probably just want to go back.
+                </p>
+            </Route>
+            <Route path="/">
+                <Home projects={ projects }/>
+            </Route>
+        </Switch>
     );
 }
 
