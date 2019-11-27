@@ -1,5 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Switch, Route } from 'react-router-dom';
+import Home from './pages/home/home';
+
+// Import css classes
 import './App.css';
 import './AppVars.css';
 
@@ -64,22 +67,19 @@ const App = () => {
         },
     ];
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welcome to the projects page!
-        </p>
-        <p>
-          Want to see a preview of what's to come? Go to the staging deploy and check out
-          the beta version of this site! 
-        </p>
-        <a href="http://beta.projects.theserverproject.com">Staging Site</a>
-      </header>
-    </div>
-  );
+    return (
+        <Switch>
+            <Route path="/test">
+                <p>
+                    hello. Wecome to the secret testing path. Nothing fun lives
+                    here, you probably just want to go back.
+                </p>
+            </Route>
+            <Route path="/">
+                <Home projects={ projects }/>
+            </Route>
+        </Switch>
+    );
 }
 
 export default App;
