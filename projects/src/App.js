@@ -10,6 +10,24 @@ const App = () => {
 
     let projects = [
         {
+            'shortName': 'GitHub',
+            'longName': 'My GitHub',
+            'description': (
+                    <React.Fragment>
+                        For a full list of all the projects that I've worked on
+                        You can go to my GitHub!
+                        <br/><br/>
+                        If you see a project there that you would like to see
+                        hosted here (with a front-end to boot) please create
+                        an issue on this site's GitHub! Just click the
+                        GitHub logo in the bottom-right corner.
+                    </React.Fragment>
+                ),
+                'github': 'https://github.com/Ross-Alexandra',
+                'Url': 'https://github.com/Ross-Alexandra',
+                'projectsUrl': '',
+                'buttonText': 'Check out my GitHub',
+        }, {
             'shortName': 'TheServerProject',
             'longName': 'The Server Project',
             'description': (
@@ -28,6 +46,24 @@ const App = () => {
             'Url': 'http://www.theserverproject.com',
             'projectsUrl': '',
             'buttonText': 'Take me to the home page!',
+        }, {
+            'shortName': 'TourneyGen',
+            'longName': 'TourneyGen',
+            'description': (
+                    <React.Fragment>
+                        TourneyGen is a league-management website. You can
+                        create a league, and teams, then have those teams
+                        compete in matches and tournaments!
+                        <br/><br/>
+                        We will keep track of your team's ELO, win/loss,
+                        and other key details for comparing their relative
+                        skill.
+                    </React.Fragment>
+                ),
+            'github': '',
+            'Url': 'http://tourneygen.theserverproject.com',
+            'projectsUrl': '',
+            'buttonText': 'Sign up and try for yourself!',
         },
     ];
 
